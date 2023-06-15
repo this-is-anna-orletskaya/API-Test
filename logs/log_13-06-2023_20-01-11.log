@@ -1,0 +1,84 @@
+
+-----
+Test: tests/test_change_password.py::TestChangePassword::test_change_password (setup)
+Start time: 2023-06-13 20:01:12.346741
+Request method: POST
+Request URL: https://try.vikunja.io/api/v1/register
+
+Response status code: 400
+Response text: {"code":1001,"message":"A user with this username already exists."}
+
+Response headers: {'Content-Length': '68', 'Content-Type': 'application/json; charset=UTF-8', 'Date': 'Tue, 13 Jun 2023 17:01:12 GMT', 'Permissions-Policy': 'interest-cohort=()', 'Vary': 'Origin', 'X-Ratelimit-Limit': '10', 'X-Ratelimit-Remaining': '9', 'X-Ratelimit-Reset': '1686675732'}
+Response cookies: {}
+
+-----
+
+-----
+Test: tests/test_change_password.py::TestChangePassword::test_change_password (setup)
+Start time: 2023-06-13 20:01:12.636148
+Request method: POST
+Request URL: https://try.vikunja.io/api/v1/login
+
+Response status code: 200
+Response text: {"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IiIsImVtYWlsUmVtaW5kZXJzRW5hYmxlZCI6ZmFsc2UsImV4cCI6MTY4NjkzNDg3MiwiaWQiOjEyLCJpc0xvY2FsVXNlciI6dHJ1ZSwibG9uZyI6ZmFsc2UsIm5hbWUiOiIiLCJ0eXBlIjoxLCJ1c2VybmFtZSI6InRlc3RuYW1lX3Bhc3N3b3JkIn0.0-l1DMElQsH95LIxlTh2_eJvhHvqtLAU7ZLVHD2sP0I"}
+
+Response headers: {'Content-Length': '293', 'Content-Type': 'application/json; charset=UTF-8', 'Date': 'Tue, 13 Jun 2023 17:01:12 GMT', 'Permissions-Policy': 'interest-cohort=()', 'Vary': 'Origin', 'X-Ratelimit-Limit': '10', 'X-Ratelimit-Remaining': '8', 'X-Ratelimit-Reset': '1686675732'}
+Response cookies: {}
+
+-----
+
+-----
+Test: tests/test_change_password.py::TestChangePassword::test_change_password (call)
+Start time: 2023-06-13 20:01:13.021430
+Request method: POST
+Request URL: https://try.vikunja.io/api/v1/user/password
+
+Response status code: 200
+Response text: {"message":"The password was updated successfully."}
+
+Response headers: {'Content-Length': '53', 'Content-Type': 'application/json; charset=UTF-8', 'Date': 'Tue, 13 Jun 2023 17:01:13 GMT', 'Permissions-Policy': 'interest-cohort=()', 'Vary': 'Origin'}
+Response cookies: {}
+
+-----
+
+-----
+Test: tests/test_change_password.py::TestChangePassword::test_change_wrong_password (call)
+Start time: 2023-06-13 20:01:13.531806
+Request method: POST
+Request URL: https://try.vikunja.io/api/v1/user/password
+
+Response status code: 412
+Response text: {"code":1011,"message":"Wrong username or password."}
+
+Response headers: {'Content-Length': '54', 'Content-Type': 'application/json; charset=UTF-8', 'Date': 'Tue, 13 Jun 2023 17:01:13 GMT', 'Permissions-Policy': 'interest-cohort=()', 'Vary': 'Origin'}
+Response cookies: {}
+
+-----
+
+-----
+Test: tests/test_change_password.py::TestChangePassword::test_change_wrong_password (call)
+Start time: 2023-06-13 20:01:13.867272
+Request method: POST
+Request URL: https://try.vikunja.io/api/v1/user/password
+
+Response status code: 200
+Response text: {"message":"The password was updated successfully."}
+
+Response headers: {'Content-Length': '53', 'Content-Type': 'application/json; charset=UTF-8', 'Date': 'Tue, 13 Jun 2023 17:01:13 GMT', 'Permissions-Policy': 'interest-cohort=()', 'Vary': 'Origin'}
+Response cookies: {}
+
+-----
+
+-----
+Test: tests/test_change_password.py::TestChangePassword::test_change_same_password (call)
+Start time: 2023-06-13 20:01:14.511923
+Request method: POST
+Request URL: https://try.vikunja.io/api/v1/user/password
+
+Response status code: 200
+Response text: {"message":"The password was updated successfully."}
+
+Response headers: {'Content-Length': '53', 'Content-Type': 'application/json; charset=UTF-8', 'Date': 'Tue, 13 Jun 2023 17:01:14 GMT', 'Permissions-Policy': 'interest-cohort=()', 'Vary': 'Origin'}
+Response cookies: {}
+
+-----

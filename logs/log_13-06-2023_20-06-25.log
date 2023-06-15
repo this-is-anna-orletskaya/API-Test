@@ -1,0 +1,110 @@
+
+-----
+Test: tests/test_user.py::TestUser::test_get_user_info (setup)
+Start time: 2023-06-13 20:06:25.638384
+Request method: POST
+Request URL: https://try.vikunja.io/api/v1/register
+
+Response status code: 200
+Response text: {"id":15,"name":"","username":"testname_user","email":"testusermail@gmail.com","created":"2023-06-13T19:06:25+02:00","updated":"2023-06-13T19:06:25.700288921+02:00"}
+
+Response headers: {'Content-Length': '166', 'Content-Type': 'application/json; charset=UTF-8', 'Date': 'Tue, 13 Jun 2023 17:06:25 GMT', 'Permissions-Policy': 'interest-cohort=()', 'Vary': 'Origin', 'X-Ratelimit-Limit': '10', 'X-Ratelimit-Remaining': '9', 'X-Ratelimit-Reset': '1686676045'}
+Response cookies: {}
+
+-----
+
+-----
+Test: tests/test_user.py::TestUser::test_get_user_info (setup)
+Start time: 2023-06-13 20:06:26.030825
+Request method: POST
+Request URL: https://try.vikunja.io/api/v1/login
+
+Response status code: 200
+Response text: {"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IiIsImVtYWlsUmVtaW5kZXJzRW5hYmxlZCI6ZmFsc2UsImV4cCI6MTY4NjkzNTE4NiwiaWQiOjE1LCJpc0xvY2FsVXNlciI6dHJ1ZSwibG9uZyI6ZmFsc2UsIm5hbWUiOiIiLCJ0eXBlIjoxLCJ1c2VybmFtZSI6InRlc3RuYW1lX3VzZXIifQ.CXjvtyrGwFlsam1a7JR3pUnMzfMH65CIsoznVi273sM"}
+
+Response headers: {'Content-Length': '288', 'Content-Type': 'application/json; charset=UTF-8', 'Date': 'Tue, 13 Jun 2023 17:06:26 GMT', 'Permissions-Policy': 'interest-cohort=()', 'Vary': 'Origin', 'X-Ratelimit-Limit': '10', 'X-Ratelimit-Remaining': '8', 'X-Ratelimit-Reset': '1686676045'}
+Response cookies: {}
+
+-----
+
+-----
+Test: tests/test_user.py::TestUser::test_get_user_info (call)
+Start time: 2023-06-13 20:06:26.393317
+Request method: GET
+Request URL: https://try.vikunja.io/api/v1/user
+
+Response status code: 200
+Response text: {"id":15,"name":"","username":"testname_user","created":"2023-06-13T19:06:25+02:00","updated":"2023-06-13T19:06:25+02:00","settings":{"name":"","email_reminders_enabled":false,"discoverable_by_name":false,"discoverable_by_email":false,"overdue_tasks_reminders_enabled":true,"overdue_tasks_reminders_time":"9:00","default_project_id":31,"week_start":0,"language":"","timezone":"Europe/Berlin","frontend_settings":null},"deletion_scheduled_at":"0001-01-01T00:00:00Z","is_local_user":true}
+
+Response headers: {'Content-Length': '487', 'Content-Type': 'application/json; charset=UTF-8', 'Date': 'Tue, 13 Jun 2023 17:06:26 GMT', 'Permissions-Policy': 'interest-cohort=()', 'Vary': 'Origin'}
+Response cookies: {}
+
+-----
+
+-----
+Test: tests/test_user.py::TestUser::test_get_user_info_invalid_token (call)
+Start time: 2023-06-13 20:06:26.611071
+Request method: GET
+Request URL: https://try.vikunja.io/api/v1/user
+
+Response status code: 401
+Response text: {"message":"invalid or expired jwt"}
+
+Response headers: {'Content-Length': '37', 'Content-Type': 'application/json; charset=UTF-8', 'Date': 'Tue, 13 Jun 2023 17:06:26 GMT', 'Permissions-Policy': 'interest-cohort=()', 'Vary': 'Origin'}
+Response cookies: {}
+
+-----
+
+-----
+Test: tests/test_user.py::TestUser::test_delete_user_all_path (call)
+Start time: 2023-06-13 20:06:26.821716
+Request method: POST
+Request URL: https://try.vikunja.io/api/v1/user/deletion/request
+
+Response status code: 200
+Response text: {"message":"Successfully requested deletion."}
+
+Response headers: {'Content-Length': '47', 'Content-Type': 'application/json; charset=UTF-8', 'Date': 'Tue, 13 Jun 2023 17:06:26 GMT', 'Permissions-Policy': 'interest-cohort=()', 'Vary': 'Origin'}
+Response cookies: {}
+
+-----
+
+-----
+Test: tests/test_user.py::TestUser::test_delete_user_all_path (call)
+Start time: 2023-06-13 20:06:27.158639
+Request method: POST
+Request URL: https://try.vikunja.io/api/v1/user/deletion/confirm
+
+Response status code: 204
+Response text: 
+Response headers: {'Content-Type': 'application/json; charset=UTF-8', 'Date': 'Tue, 13 Jun 2023 17:06:27 GMT', 'Permissions-Policy': 'interest-cohort=()', 'Vary': 'Origin'}
+Response cookies: {}
+
+-----
+
+-----
+Test: tests/test_user.py::TestUser::test_delete_user_all_path (call)
+Start time: 2023-06-13 20:06:27.373554
+Request method: POST
+Request URL: https://try.vikunja.io/api/v1/user/deletion/cancel
+
+Response status code: 204
+Response text: 
+Response headers: {'Content-Type': 'application/json; charset=UTF-8', 'Date': 'Tue, 13 Jun 2023 17:06:27 GMT', 'Permissions-Policy': 'interest-cohort=()', 'Vary': 'Origin'}
+Response cookies: {}
+
+-----
+
+-----
+Test: tests/test_user.py::TestUser::test_delete_user_wrong_password (call)
+Start time: 2023-06-13 20:06:27.713496
+Request method: POST
+Request URL: https://try.vikunja.io/api/v1/user/deletion/request
+
+Response status code: 412
+Response text: {"code":1011,"message":"Wrong username or password."}
+
+Response headers: {'Content-Length': '54', 'Content-Type': 'application/json; charset=UTF-8', 'Date': 'Tue, 13 Jun 2023 17:06:27 GMT', 'Permissions-Policy': 'interest-cohort=()', 'Vary': 'Origin'}
+Response cookies: {}
+
+-----

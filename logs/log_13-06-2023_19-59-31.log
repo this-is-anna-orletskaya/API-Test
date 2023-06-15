@@ -1,0 +1,84 @@
+
+-----
+Test: tests/test_project.py::TestProject::test_create_new_project (setup)
+Start time: 2023-06-13 19:59:32.886998
+Request method: POST
+Request URL: https://try.vikunja.io/api/v1/register
+
+Response status code: 200
+Response text: {"id":13,"name":"","username":"testname_project","email":"testprojectmail@gmail.com","created":"2023-06-13T18:59:32+02:00","updated":"2023-06-13T18:59:32.888650207+02:00"}
+
+Response headers: {'Content-Length': '172', 'Content-Type': 'application/json; charset=UTF-8', 'Date': 'Tue, 13 Jun 2023 16:59:32 GMT', 'Permissions-Policy': 'interest-cohort=()', 'Vary': 'Origin', 'X-Ratelimit-Limit': '10', 'X-Ratelimit-Remaining': '9', 'X-Ratelimit-Reset': '1686675632'}
+Response cookies: {}
+
+-----
+
+-----
+Test: tests/test_project.py::TestProject::test_create_new_project (setup)
+Start time: 2023-06-13 19:59:33.276930
+Request method: POST
+Request URL: https://try.vikunja.io/api/v1/login
+
+Response status code: 200
+Response text: {"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IiIsImVtYWlsUmVtaW5kZXJzRW5hYmxlZCI6ZmFsc2UsImV4cCI6MTY4NjkzNDc3MywiaWQiOjEzLCJpc0xvY2FsVXNlciI6dHJ1ZSwibG9uZyI6ZmFsc2UsIm5hbWUiOiIiLCJ0eXBlIjoxLCJ1c2VybmFtZSI6InRlc3RuYW1lX3Byb2plY3QifQ.6jYE_3Q8kt-WG0ez56bz6hUCGZDxcv6Twu8uINkCMGk"}
+
+Response headers: {'Content-Length': '292', 'Content-Type': 'application/json; charset=UTF-8', 'Date': 'Tue, 13 Jun 2023 16:59:33 GMT', 'Permissions-Policy': 'interest-cohort=()', 'Vary': 'Origin', 'X-Ratelimit-Limit': '10', 'X-Ratelimit-Remaining': '8', 'X-Ratelimit-Reset': '1686675632'}
+Response cookies: {}
+
+-----
+
+-----
+Test: tests/test_project.py::TestProject::test_create_new_project (call)
+Start time: 2023-06-13 19:59:33.628378
+Request method: PUT
+Request URL: https://try.vikunja.io/api/v1/projects
+
+Response status code: 201
+Response text: {"id":29,"title":"New test project","description":"New test project","identifier":"FRjnstm9","hex_color":"556B2F","parent_project_id":0,"owner":{"id":13,"name":"","username":"testname_project","created":"2023-06-13T18:59:32+02:00","updated":"2023-06-13T18:59:32+02:00"},"is_archived":false,"background_information":null,"background_blur_hash":"LKN]Rv%2Tw=w]~RBVZRi};RPxuwH","is_favorite":false,"position":1900544,"created":"2023-06-13T18:59:33.427604556+02:00","updated":"2023-06-13T18:59:33.428433124+02:00"}
+
+Response headers: {'Content-Length': '510', 'Content-Type': 'application/json; charset=UTF-8', 'Date': 'Tue, 13 Jun 2023 16:59:33 GMT', 'Permissions-Policy': 'interest-cohort=()', 'Vary': 'Origin'}
+Response cookies: {}
+
+-----
+
+-----
+Test: tests/test_project.py::TestProject::test_get_project (call)
+Start time: 2023-06-13 19:59:34.125005
+Request method: GET
+Request URL: https://try.vikunja.io/api/v1/projects/29
+
+Response status code: 200
+Response text: {"id":29,"title":"New test project","description":"New test project","identifier":"FRjnstm9","hex_color":"556B2F","parent_project_id":0,"owner":{"id":13,"name":"","username":"testname_project","created":"2023-06-13T18:59:32+02:00","updated":"2023-06-13T18:59:32+02:00"},"is_archived":false,"background_information":null,"background_blur_hash":"LKN]Rv%2Tw=w]~RBVZRi};RPxuwH","is_favorite":false,"position":1900544,"created":"2023-06-13T18:59:33+02:00","updated":"2023-06-13T18:59:33+02:00"}
+
+Response headers: {'Access-Control-Expose-Headers': 'x-max-right', 'Content-Length': '490', 'Content-Type': 'application/json; charset=UTF-8', 'Date': 'Tue, 13 Jun 2023 16:59:33 GMT', 'Permissions-Policy': 'interest-cohort=()', 'Vary': 'Origin', 'X-Max-Right': '2'}
+Response cookies: {}
+
+-----
+
+-----
+Test: tests/test_project.py::TestProject::test_update_project (call)
+Start time: 2023-06-13 19:59:34.421677
+Request method: POST
+Request URL: https://try.vikunja.io/api/v1/projects/29
+
+Response status code: 200
+Response text: {"id":29,"title":"New test project","description":"Test project description","identifier":"","hex_color":"","parent_project_id":0,"owner":{"id":13,"name":"","username":"testname_project","created":"2023-06-13T18:59:32+02:00","updated":"2023-06-13T18:59:32+02:00"},"is_archived":false,"background_information":null,"background_blur_hash":"LKN]Rv%2Tw=w]~RBVZRi};RPxuwH","is_favorite":false,"position":0,"created":"2023-06-13T18:59:33+02:00","updated":"2023-06-13T18:59:34+02:00"}
+
+Response headers: {'Content-Length': '478', 'Content-Type': 'application/json; charset=UTF-8', 'Date': 'Tue, 13 Jun 2023 16:59:34 GMT', 'Permissions-Policy': 'interest-cohort=()', 'Vary': 'Origin'}
+Response cookies: {}
+
+-----
+
+-----
+Test: tests/test_project.py::TestProject::test_delete_project (call)
+Start time: 2023-06-13 19:59:34.751485
+Request method: DELETE
+Request URL: https://try.vikunja.io/api/v1/projects/29
+
+Response status code: 200
+Response text: {"message":"Successfully deleted."}
+
+Response headers: {'Content-Length': '36', 'Content-Type': 'application/json; charset=UTF-8', 'Date': 'Tue, 13 Jun 2023 16:59:34 GMT', 'Permissions-Policy': 'interest-cohort=()', 'Vary': 'Origin'}
+Response cookies: {}
+
+-----
