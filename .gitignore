@@ -3,4 +3,5 @@ __pycache__/
 .vscode/
 docs/
 allure_test_results/
+logs/
 *.log
