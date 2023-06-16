@@ -2,6 +2,10 @@ import requests
 from logger import Logger
 
 
+
+"""Модуль основных HTTP запросов на основе библиотеки requests с включением логирования"""
+
+
 class HttpMethods():
 
     # headers = {'Content-Type': 'application/json'}

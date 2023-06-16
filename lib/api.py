@@ -1,6 +1,12 @@
 from http_requests import HttpMethods
 
+
+
 base_url = "https://try.vikunja.io/api/v1"
+
+
+"""Методы тестируемой API"""
+
 
 class ApiMethods():
 

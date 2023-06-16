@@ -3,6 +3,10 @@ from bs4 import BeautifulSoup
 from jsonschema import validate
 
 
+
+"""Методы проверки прохождения тестов с помощью конструкции assert"""
+
+
 class Assertions():
 
     @staticmethod
@@ -40,7 +44,7 @@ class Assertions():
     
     @staticmethod
     def check_validate_response_json_schema(response):
-        with open('lib\schema.json') as file:
+        with open('lib\docs\schema.json') as file:
             string = file.read()
             schema = json.loads(string)
         response_json = json.loads(response.text)

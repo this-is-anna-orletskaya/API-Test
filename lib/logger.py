@@ -1,7 +1,12 @@
 import datetime
 import os
 
+
+"""Логирование тестов"""
+
+
 class Logger():
+
     file_name = f"logs/log_" + str(datetime.datetime.now().strftime("%d-%m-%Y_%H-%M-%S")) + ".log"
 
     @classmethod

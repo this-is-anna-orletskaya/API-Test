@@ -2,6 +2,9 @@ import random
 
 
 
+"""Модуль генерации случайных данных"""
+
+
 class GenerateData():
 
     @staticmethod
